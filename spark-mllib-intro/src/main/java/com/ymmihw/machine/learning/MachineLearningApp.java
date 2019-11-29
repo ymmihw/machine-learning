@@ -1,7 +1,6 @@
 package com.ymmihw.machine.learning;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.commons.io.FileUtils;
@@ -24,8 +23,8 @@ import scala.Tuple2;
 
 public class MachineLearningApp {
 
-  public static void main(String[] args) throws IOException {
-    FileUtils.forceDelete(new File("model"));
+  public static void main(String[] args) {
+    FileUtils.deleteQuietly(new File("model"));
     // 1. Setting the Spark Context
     SparkConf conf = new SparkConf().setAppName("Main").setMaster("local[2]")
         .set("spark.executor.memory", "3g").set("spark.driver.memory", "3g");
