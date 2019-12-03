@@ -54,5 +54,6 @@
   <module>logistic-regression</module>
   <module>spark-mllib-intro</module>
   <module>k-means</module>
+  <module>deeplearning4j-intro</module>
  </modules>
 </project>
